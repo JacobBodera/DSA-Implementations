@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <cmath>
-#include "binarySearch.h"
+#include "binary-search.h"
 
 int binarySearch(std::vector<int> array, int target) {
     int startIndex = 0;
