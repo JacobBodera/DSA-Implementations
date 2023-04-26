@@ -1,7 +1,7 @@
 #ifndef LINKED_LIST_H
 #define LINKED_LIST_H
 
-class LinkedList {
+class SequentialList {
     public:
 
         typedef int DataType;
@@ -12,14 +12,14 @@ class LinkedList {
         unsigned int capacity_;
         unsigned int size_;
 
-        LinkedList(const LinkedList& rhs);
-        LinkedList& operator=(const LinkedList& rhs);
+        SequentialList(const SequentialList& rhs);
+        SequentialList& operator=(const SequentialList& rhs);
     
     public: 
         // Constuctor
-        LinkedList(unsigned int cap);
+        SequentialList(unsigned int cap);
         // Destructor
-        ~LinkedList();
+        ~SequentialList();
 
         // Constant member functions
         unsigned int size() const;
