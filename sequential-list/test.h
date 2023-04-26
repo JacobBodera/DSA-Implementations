@@ -2,6 +2,7 @@
 #define TEST_H
 
 #include "sequential-list.h"
+#include <iostream>
 
 #define ASSERT_TRUE(T) if (!(T)) return false;
 #define ASSERT_FALSE(T) if ((T)) return false
@@ -28,8 +29,8 @@ class SequentialListTest {
             ASSERT_TRUE(list1.insertFront(100))
             ASSERT_TRUE(list2.insertBack(100))
             ASSERT_TRUE(list1.size() == list2.size() && list1.size() == 1)
-            // ASSERT_TRUE(list1.data_ != NULL)
-            // ASSERT_TRUE(list2.data_ != NULL)
+            ASSERT_TRUE(list1.data_ != NULL)
+            ASSERT_TRUE(list2.data_ != NULL)
             ASSERT_TRUE(list1.select(0) == list2.select(0) && list1.select(0) == 100)
             return true;
         }

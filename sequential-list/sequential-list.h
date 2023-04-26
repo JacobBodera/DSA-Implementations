@@ -12,6 +12,8 @@ class SequentialList {
         unsigned int capacity_;
         unsigned int size_;
 
+        friend class SequentialListTest;
+
         SequentialList(const SequentialList& rhs);
         SequentialList& operator=(const SequentialList& rhs);
     
