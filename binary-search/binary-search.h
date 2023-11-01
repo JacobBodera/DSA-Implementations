@@ -1,7 +1,8 @@
 #ifndef BINARY_SEARCH_H
 #define BINARY_SEARCH_H
 
+#include <vector>
 
-int binarySearch(int array[], int target);
+int binarySearch(std::vector<int> array, int target);
 
 #endif

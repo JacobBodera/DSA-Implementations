@@ -1,20 +1,17 @@
 #include "test.h"
-#include "binary-search.h"
 #include <string>
 #include <iostream>
 
-using namespace std;
-
 const int NUM_TESTS = 7;
 
-string getPassFailString(bool status) {
+std::string getPassFailString(bool status) {
     return status ? "TEST PASSED" : "TEST FAILED";
 }
 
 int main() {
     BinarySearchTest binSearchTest;
 
-    string binarySearchTestDescriptions[NUM_TESTS] = {
+    std::string binarySearchTestDescriptions[NUM_TESTS] = {
         "Test 1: Empty array",
         "Test 2: Single element",
         "Test 3: Odd number of elements, value in first half",
@@ -34,8 +31,8 @@ int main() {
     binarySearchTestResults[3] = binSearchTest.test7();
 
 
-    cout << "---------BINARY SEARCH TEST RESULTS---------" << endl;
+    std::cout << "---------BINARY SEARCH TEST RESULTS---------" << std::endl;
     for (int i = 0; i < NUM_TESTS; i++) {
-        cout << binarySearchTestDescriptions[i] << endl << binarySearchTestResults[i] << endl; 
+        std::cout << binarySearchTestDescriptions[i] << "-----" << getPassFailString(binarySearchTestResults[i]) << std::endl; 
     }
 }

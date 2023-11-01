@@ -2,6 +2,8 @@
 #define TEST_H
 
 #include "binary-search.h"
+#include "binary-search.cpp"
+#include <vector>
 
 #define ASSERT_TRUE(T) if (!(T)) return false;
 #define ASSERT_FALSE(T) if ((T)) return false;
@@ -10,7 +12,7 @@ class BinarySearchTest {
     public:
 
         bool test1() {
-            int array[] = {};
+            std::vector<int> array = {};
             int value = 0;
 
             ASSERT_TRUE(binarySearch(array, value) == -1)
@@ -18,7 +20,7 @@ class BinarySearchTest {
         }
 
         bool test2() {
-            int array[] = {5};
+            std::vector<int> array = {5};
             int value = 5;
             
             ASSERT_TRUE(binarySearch(array, value) == 0)
@@ -26,7 +28,7 @@ class BinarySearchTest {
         }
 
         bool test3() {
-            int array[] = {1, 2, 3, 5, 7, 11, 13};
+            std::vector<int> array = {1, 2, 3, 5, 7, 11, 13};
             int value = 2;
 
             ASSERT_TRUE(binarySearch(array, value) == 1)
@@ -34,7 +36,7 @@ class BinarySearchTest {
         }
 
         bool test4() {
-            int array[] = {1, 2, 3, 5, 7, 11, 13};
+            std::vector<int> array = {1, 2, 3, 5, 7, 11, 13};
             int value = 11;
 
             ASSERT_TRUE(binarySearch(array, value) == 5)
@@ -42,7 +44,7 @@ class BinarySearchTest {
         }
 
         bool test5() {
-            int array[] = {1, 2, 3, 5, 7, 11, 13, 17};
+            std::vector<int> array = {1, 2, 3, 5, 7, 11, 13, 17};
             int value = 2;
 
             ASSERT_TRUE(binarySearch(array, value) == 1)
@@ -50,7 +52,7 @@ class BinarySearchTest {
         }
 
         bool test6() {
-            int array[] = {1, 2, 3, 5, 7, 11, 13, 17};
+            std::vector<int> array = {1, 2, 3, 5, 7, 11, 13, 17};
             int value = 13;
 
             ASSERT_TRUE(binarySearch(array, value) == 6)
@@ -58,7 +60,7 @@ class BinarySearchTest {
         }
 
         bool test7() {
-            int array[] = {1, 2, 3, 4, 5, 6, 7};
+            std::vector<int> array = {1, 2, 3, 4, 5, 6, 7};
             int value = 0;
 
             ASSERT_TRUE(binarySearch(array, value) == -1)
